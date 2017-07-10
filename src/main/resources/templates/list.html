@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" media="all" href="../static/css/bootstrap.css" />
+    <script type="application/javascript" src="../static/js/bootstrap.js"></script>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sd-12">
+
+            <div class="page-header">
+                <h1>Waluty</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sd-12">
+            <div th:object="${currency}" >
+                <span th:text="${currency.name}">Nazwa waluty</span>
+                <span th:text="${currency.value}">Wartość waluty</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sd-12">
+
+            <table>
+                <tr scope="row" th:each="c: ${list}">
+                    <td th:text="${c.name}">Nazwa</td>
+                    <td th:text="${c.value}">Wartosc</td>
+                    <td th:text="${c.id}">ID</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
