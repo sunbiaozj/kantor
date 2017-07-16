@@ -10,6 +10,7 @@ import java.util.List;
 @Service
 public class CurrencyService {
 
+    //Tu można dodać dodatkową logikę biznesową odnośnie elementów pozyskiwanych z bazy danych (np. walidacja, spr. czy użytk. ist.)
     @Autowired
     CurrencyRepository currencyRepository;
 
